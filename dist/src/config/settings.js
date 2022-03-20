@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.USE_SECURITY = exports.hasSession = exports.PRODUCTION = exports.jwtRefreshExpiration = exports.jwtExpiration = exports.USE_COMPRESSION = exports.GRAPHQL_PLAYGROUND = exports.GRAPHQL = exports.PORT = exports.CORS = void 0;
+const cors_1 = require("./cors");
+exports.CORS = cors_1.security.cors;
+exports.PORT = 4000;
+exports.GRAPHQL = true;
+exports.GRAPHQL_PLAYGROUND = true;
+exports.USE_COMPRESSION = true;
+exports.jwtExpiration = process.env.jwtExpiration || '1d';
+exports.jwtRefreshExpiration = process.env.jwtRefreshExpiration || '10d';
+exports.PRODUCTION = process.env.NODE_ENV === 'production';
+exports.hasSession = false;
+exports.USE_SECURITY = false;

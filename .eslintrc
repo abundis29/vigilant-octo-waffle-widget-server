@@ -1,0 +1,13 @@
+{
+    "plugins": [
+        "security"
+    ],
+    "extends": [
+        "plugin:security/recommended"
+    ],
+    "ignorePatterns": [
+        "dist/**/*.js",
+        "scripts/*.js",
+        "coverage"
+    ]
+}
